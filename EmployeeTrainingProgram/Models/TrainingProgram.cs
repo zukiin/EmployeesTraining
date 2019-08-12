@@ -27,7 +27,6 @@ namespace EmployeeTrainingProgram.Models
         public DateTime IssueDate { get; set; }
 
         [DisplayName("Expiry Date")]
-        [DataType(DataType.Date)]
         public DateTime ExpiryDate { get; set; }
 
         public string Status { get; set; }
