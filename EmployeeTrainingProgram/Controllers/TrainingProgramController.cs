@@ -28,17 +28,17 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 1,
                 CertificateName = "Basic Rigging Training",
                 Group = "",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2018, 02, 09),
+                ExpiryDate = null,
                 Status = "Permanent"
-            });
+            }) ;
             programs.Add(new TrainingProgram
             {
                 ProgramID = 2,
                 CertificateName = "Breathing Apparatus Training",
                 Group = "",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = null,
+                ExpiryDate = null,
                 Status = "Not issued"
             });
             programs.Add(new TrainingProgram
@@ -46,8 +46,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 3,
                 CertificateName = "Diversity Training",
                 Group = "",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2017, 11, 29),
+                ExpiryDate = null,
                 Status = "Permanent"
             });
             programs.Add(new TrainingProgram
@@ -55,8 +55,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 4,
                 CertificateName = "Electric Hoist Training",
                 Group = "Competencies - Licence",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2018, 03, 14),
+                ExpiryDate = new DateTime(2018, 03, 14),
                 Status = "Valid"
             });
             programs.Add(new TrainingProgram
@@ -64,8 +64,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 5,
                 CertificateName = "GM Production Bonus Feedback Session",
                 Group = "Communication - General",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2019, 06, 14),
+                ExpiryDate = null,
                 Status = "Permanent"
             });
             programs.Add(new TrainingProgram
@@ -73,8 +73,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 6,
                 CertificateName = "GM Information Training",
                 Group = "Communication - General",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2018, 11, 13),
+                ExpiryDate = null,
                 Status = "Permanent"
             });
             programs.Add(new TrainingProgram
@@ -82,8 +82,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 7,
                 CertificateName = "Induction",
                 Group = "",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2019, 02, 06),
+                ExpiryDate = new DateTime(2020, 02, 06),
                 Status = "Valid"
             });
             programs.Add(new TrainingProgram
@@ -91,8 +91,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 8,
                 CertificateName = "Information Session Section 189",
                 Group = "Communication - General",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2019, 05, 31),
+                ExpiryDate = null,
                 Status = "Permanent"
             });
             programs.Add(new TrainingProgram
@@ -100,8 +100,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 9,
                 CertificateName = "Medical - Annual",
                 Group = "",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Now,
+                IssueDate = new DateTime(2019, 05, 09),
+                ExpiryDate = new DateTime(2020, 05, 09),
                 Status = "Valid"
             });
             programs.Add(new TrainingProgram
@@ -109,8 +109,8 @@ namespace EmployeeTrainingProgram.Controllers
                 ProgramID = 10,
                 CertificateName = "MS-TEM-SH-TT-006 REV 1.0 The Environment",
                 Group = "Communication - Toolbox Talk",
-                IssueDate = DateTime.Now,
-                ExpiryDate = DateTime.Today,
+                IssueDate = null,
+                ExpiryDate = null,
                 Status = "Not issued"
             });
 

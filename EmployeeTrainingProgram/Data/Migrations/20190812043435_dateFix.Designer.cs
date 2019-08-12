@@ -4,14 +4,16 @@ using EmployeeTrainingProgram.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmployeeTrainingProgram.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190812043435_dateFix")]
+    partial class dateFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +31,12 @@ namespace EmployeeTrainingProgram.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(70);
 
+                    b.Property<DateTime>("ExpiryDate");
+
                     b.Property<string>("Group")
                         .HasMaxLength(20);
+
+                    b.Property<DateTime>("IssueDate");
 
                     b.Property<string>("Status");
 

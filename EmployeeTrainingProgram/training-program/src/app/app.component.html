@@ -1,0 +1,36 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div style="text-align:center">
+      <h1> Employee Training Program </h1>
+    </div>
+    <br>
+    <table>
+      <tr class="rows">
+    <th></th>
+    <th> Certificate Name </th>
+    <th> Group </th>
+    <th> Issued Date </th>
+    <th> Expiry Date </th>
+    <th> Status </th>
+      </tr>
+      <tr class="rows" *ngFor="let program of trainingPrograms">
+        <td style="text-align: center;">
+          <button class="btn-edit"><i class="fa fa-edit"></i></button>
+          <button class="btn-delete"><i class="fa fa-trash"></i></button>
+        </td>
+        <td>{{program.certificateName}}</td>
+        <td>{{program.group}}</td>
+        <td>{{program.issueDate | date: 'dd MMM yyyy'}}</td>
+        <td>{{program.expiryDate | date: 'dd MMM yyyy'}}</td>
+        <td [ngClass] = "{'green':program.status=='Valid', 'yellow':program.status=='Not issued', 'grey':program.status=='Permanent'}">
+          {{program.status}}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<router-outlet></router-outlet>

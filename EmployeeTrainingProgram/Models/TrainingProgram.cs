@@ -23,11 +23,10 @@ namespace EmployeeTrainingProgram.Models
         public string Group { get; set; }
 
         [DisplayName("Issue Date")]
-        [DataType(DataType.Date)]
-        public DateTime IssueDate { get; set; }
+        public DateTime? IssueDate = null;
 
         [DisplayName("Expiry Date")]
-        public DateTime ExpiryDate { get; set; }
+        public DateTime? ExpiryDate = null;
 
         public string Status { get; set; }
     }
