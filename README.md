@@ -8,6 +8,9 @@ Open with Visual Studio and debug (F5) the API
 You need to have Node.js and Angular installed
 
 Open the terminal and cd into 'training-program'
-Install all the necessary packages
+
+Run npm install to install all the necessary packages
+
 Run 'ng serve' to run the application
+
 On your browser access 'localhost:4200'
