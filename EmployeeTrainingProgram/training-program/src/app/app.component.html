@@ -6,6 +6,7 @@
     <div style="text-align:center">
       <h1> Employee Training Program </h1>
     </div>
+    <h2>{{errorMessage}}</h2>
     <br>
     <table>
       <tr class="rows">
@@ -17,7 +18,7 @@
     <th> Status </th>
       </tr>
       <tr class="rows" *ngFor="let program of trainingPrograms">
-        <td style="text-align: center;">
+        <td class="buttons" style="text-align: center;">
           <button class="btn-edit"><i class="fa fa-edit"></i></button>
           <button class="btn-delete"><i class="fa fa-trash"></i></button>
         </td>
@@ -25,7 +26,7 @@
         <td>{{program.group}}</td>
         <td>{{program.issueDate | date: 'dd MMM yyyy'}}</td>
         <td>{{program.expiryDate | date: 'dd MMM yyyy'}}</td>
-        <td [ngClass] = "{'green':program.status=='Valid', 'yellow':program.status=='Not issued', 'grey':program.status=='Permanent'}">
+        <td [ngClass] = "{'green':program.status=='Valid', 'yellow':program.status=='Not issued', 'grey':program.status=='Permanent', 'white':program.status=='Expired'}">
           {{program.status}}
         </td>
       </tr>

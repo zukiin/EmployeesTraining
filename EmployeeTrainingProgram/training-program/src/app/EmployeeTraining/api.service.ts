@@ -6,8 +6,8 @@ import TrainingProgram from './TrainingProgram';
 
 @Injectable()
 export default class TrainingService {
-  public API = 'https://localhost:44349/';
-  public TRAINING_PROGRAM_ENDPOINT = 'https://localhost:44349/api/trainingprogram';
+  private API = 'https://localhost:44349/';
+  private TRAINING_PROGRAM_ENDPOINT = 'https://localhost:44349/api/trainingprogram';
 
   constructor(private http: HttpClient) { }
 

@@ -28,6 +28,27 @@ namespace EmployeeTrainingProgram.Models
         [DisplayName("Expiry Date")]
         public DateTime? ExpiryDate = null;
 
-        public string Status { get; set; }
+        [Required]
+        public string Status;
+
+        public string GetStatus()
+        {
+            if(ExpiryDate < DateTime.Now)
+            {
+                return Status = "<span style=\'background-color:Green'>Not Issued</span>";
+            }
+            else if(IssueDate != null && ExpiryDate == null)
+            {
+                return Status = "<span style=\'background-color:Grey'>Permanent</span>";
+            }
+            else if (IssueDate == null)
+            {
+                return Status = "<span style=\'background-color:Orange'>Not Issued</span>";
+            }
+            else
+            {
+                return Status = "<span style=\'background-color:White'>Expired</span>";
+            }
+        }
     }
 }

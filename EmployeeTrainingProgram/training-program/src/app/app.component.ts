@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import TrainingProgram from './EmployeeTraining/TrainingProgram';
 import ApiService from './EmployeeTraining/api.service';
+import { error } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,10 @@ import ApiService from './EmployeeTraining/api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'training-program';
-  trainingPrograms: Array<TrainingProgram>;
+  public title = 'training-program';
+  public trainingPrograms: Array<TrainingProgram>;
+  public errorMessage: string;
+
 
   constructor(private apiService: ApiService) {
   }
@@ -19,6 +22,6 @@ export class AppComponent implements OnInit {
     this.apiService.getAll().
     subscribe(data => {
       this.trainingPrograms = data;
-    });
+    }, error => {this.errorMessage = "Data didn't load properly" });
   }
 }

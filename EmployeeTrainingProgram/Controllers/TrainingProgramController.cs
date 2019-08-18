@@ -13,12 +13,6 @@ namespace EmployeeTrainingProgram.Controllers
     [ApiController]
     public class TrainingProgramController : ControllerBase
     {
-        private ApplicationDbContext db; //works with services
-        public TrainingProgramController(ApplicationDbContext db)
-        {
-            this.db = db;
-        }
-
         [HttpGet]
         public ActionResult<IEnumerable<TrainingProgram>> GetTrainingPrograms()
         {
@@ -115,22 +109,6 @@ namespace EmployeeTrainingProgram.Controllers
             });
 
             return programs;
-            //return db.TrainingPrograms.ToList();
-        }
-
-        [HttpPost]
-        public ActionResult<HttpResponse> AddTrainingPrograms(TrainingProgram trainingProgram)
-        {
-            if(ModelState.IsValid)
-            {
-                db.TrainingPrograms.Add(trainingProgram);
-                db.SaveChanges();
-                return Ok(trainingProgram);
-            }
-            else
-            {
-                return BadRequest("Oops! The data you passed is invalid.");
-            }          
         }
     }
 }
